@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Publicação Web e Gerenciamento de Servidores</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Guia de Publicação Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#publicacao-web">Publicação Web</a></li>
+                <li><a href="#dominio-dns">Domínio e DNS</a></li>
+                <li><a href="#servidores">Servidores</a></li>
+                <li><a href="#servidores-web">Servidores Web</a></li>
+                <li><a href="#backup">Backup e Restauração</a></li>
+                <li><a href="#ssh">SSH</a></li>
+                <li><a href="#linux">Linux</a></li>
+                <li><a href="#fontes">Fontes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Seção Publicação Web -->
+        <section id="publicacao-web">
+            <h2>O que é uma Publicação Web?</h2>
+            <p>A publicação web é o processo de disponibilizar arquivos, páginas ou aplicativos na internet. Para isso, é necessário um servidor web que hospede os arquivos e os torne acessíveis a partir de um domínio.</p>
+            <h3>Tipos de Aplicações</h3>
+            <ul>
+                <li><strong>Aplicações Estáticas:</strong> Compostas por arquivos fixos (HTML, CSS, JS) que não mudam sem intervenção manual.</li>
+                <li><strong>Aplicações Dinâmicas:</strong> Geram conteúdo em tempo real, conectadas a bancos de dados e utilizando linguagens como PHP ou Node.js.</li>
+            </ul>
+        </section>
+
+        <!-- Seção Domínio e DNS -->
+        <section id="dominio-dns">
+            <h2>O que é um Domínio e um DNS?</h2>
+            <p>Um domínio é o nome amigável usado para acessar um site (exemplo.com). O DNS (Sistema de Nomes de Domínio) é o sistema que traduz esse nome para o endereço IP do servidor que hospeda o site.</p>
+        </section>
+
+        <!-- Seção Servidores -->
+        <section id="servidores">
+            <h2>Servidores: Compartilhado vs Dedicado</h2>
+            <h3>Servidor Compartilhado</h3>
+            <p>Vários sites compartilham os mesmos recursos do servidor. É mais barato, mas oferece menor desempenho.</p>
+            <h3>Servidor Dedicado</h3>
+            <p>Um servidor exclusivo para um único cliente. Oferece maior desempenho, mas é mais caro.</p>
+        </section>
+
+        <!-- Seção Servidores Web -->
+        <section id="servidores-web">
+            <h2>O que é um Servidor Web?</h2>
+            <p>Um servidor web processa e entrega páginas da web para os usuários. Exemplos:</p>
+            <ul>
+                <li><strong>Apache:</strong> Open-source, amplamente usado.</li>
+                <li><strong>Nginx:</strong> Mais rápido, ideal para alta carga.</li>
+            </ul>
+        </section>
+
+        <!-- Seção Backup -->
+        <section id="backup">
+            <h2>Backup e Restauração</h2>
+            <h3>Como fazer backup de um projeto</h3>
+            <p>Compacte os arquivos usando um programa como ZIP ou TAR. Use o seguinte comando no Linux:</p>
+            <pre><code>tar -cvf projeto.tar.gz /caminho/projeto</code></pre>
+            <h3>Como restaurar</h3>
+            <p>Descompacte o arquivo:</p>
+            <pre><code>tar -xvf projeto.tar.gz</code></pre>
+        </section>
+
+        <!-- Seção SSH -->
+        <section id="ssh">
+            <h2>O que é SSH?</h2>
+            <p>O SSH (Secure Shell) permite acessar e transferir arquivos entre uma máquina local e um servidor de forma segura. Exemplos de comandos:</p>
+            <pre><code>ssh usuario@servidor</code></pre>
+            <pre><code>scp arquivo.txt usuario@servidor:/caminho/destino</code></pre>
+        </section>
+
+        <!-- Seção Linux -->
+        <section id="linux">
+            <h2>O que é Linux?</h2>
+            <p>O Linux é um sistema operacional open-source amplamente usado em servidores web. Distribuições populares incluem:</p>
+            <ul>
+                <li>Ubuntu Server</li>
+                <li>Debian</li>
+                <li>CentOS</li>
+            </ul>
+            <h3>Comandos básicos do Linux</h3>
+            <ul>
+                <li><code>ls</code>: Lista arquivos e diretórios.</li>
+                <li><code>cd</code>: Navega entre diretórios.</li>
+                <li><code>cp</code>: Copia arquivos.</li>
+                <li><code>rm</code>: Remove arquivos.</li>
+                <li><code>mkdir</code>: Cria um diretório.</li>
+            </ul>
+        </section>
+
+        <!-- Seção Fontes -->
+        <section id="fontes">
+            <h2>Fontes</h2>
+            <ul>
+                <li><a href="https://www.hostinger.com.br/tutoriais/o-que-e-dns" target="_blank">Hostinger - O que é DNS?</a></li>
+                <li><a href="https://www.redhat.com/pt-br/topics/linux/what-is-linux" target="_blank">RedHat - O que é Linux?</a></li>
+                <li><a href="https://www.nginx.com/resources/glossary/what-is-a-web-server/" target="_blank">NGINX - O que é um servidor web?</a></li>
+                <li><a href="https://www.techtudo.com.br/noticias/2017/11/ssh-o-que-e-e-como-usar-o-protocolo-para-acessar-outros-computadores.ghtml" target="_blank">TechTudo - O que é SSH?</a></li>
+                <li><a href="https://www.apache.org/" target="_blank">Apache.org - Servidor Apache</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 - Criado por Mauricio Hillesheim</p>
+    </footer>
+</body>
+</html>
