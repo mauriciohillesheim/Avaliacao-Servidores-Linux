@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos de Publicação Web e Gerenciamento de Servidores</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="assets/index.css">
 </head>
 <body>
     <header>
@@ -60,15 +60,51 @@
         </section>
 
         <!-- Seção Backup -->
-        <section id="backup">
-            <h2>Backup e Restauração</h2>
-            <h3>Como fazer backup de um projeto</h3>
-            <p>Compacte os arquivos usando um programa como ZIP ou TAR. Use o seguinte comando no Linux:</p>
-            <pre><code>tar -cvf projeto.tar.gz /caminho/projeto</code></pre>
-            <h3>Como restaurar</h3>
-            <p>Descompacte o arquivo:</p>
-            <pre><code>tar -xvf projeto.tar.gz</code></pre>
-        </section>
+        <!-- Seção Backup e Restauração -->
+<section id="backup">
+    <h2>Backup e Restauração de Banco de Dados MySQL</h2>
+
+    <p>Utilizando o arquivo <code>banco_tarefas.sql</code>, vamos demonstrar como realizar o backup e a restauração de um banco de dados MySQL.</p>
+
+    <h3>1. Realizar o Backup de um Banco de Dados MySQL</h3>
+    <p>O backup cria uma cópia dos dados em um arquivo <code>.sql</code>.</p>
+
+    <h4>Passo a Passo:</h4>
+    <ol>
+        <li><strong>Abra o terminal ou prompt de comando.</strong></li>
+        <li><strong>Use o comando <code>mysqldump</code>:</strong></li>
+    </ol>
+    <pre><code>mysqldump -u [usuário] -p banco_tarefas > backup_banco_tarefas.sql</code></pre>
+    <ul>
+        <li><code>[usuário]</code>: O nome do usuário do banco de dados.</li>
+        <li><code>banco_tarefas</code>: Nome do banco de dados a ser copiado.</li>
+        <li><code>backup_banco_tarefas.sql</code>: Nome do arquivo onde o backup será armazenado.</li>
+    </ul>
+
+    <h3>2. Restaurar o Backup de um Banco de Dados MySQL</h3>
+    <p>Restaura o banco de dados a partir do arquivo <code>.sql</code>.</p>
+
+    <h4>Passo a Passo:</h4>
+    <ol>
+        <li><strong>Certifique-se de que o banco de dados existe. Se não, crie-o:</strong></li>
+    </ol>
+    <pre><code>CREATE DATABASE banco_tarefas;</code></pre>
+
+    <ol start="2">
+        <li><strong>Use o comando <code>mysql</code> para restaurar:</strong></li>
+    </ol>
+    <pre><code>mysql -u [usuário] -p banco_tarefas < backup_banco_tarefas.sql</code></pre>
+
+    <h3>3. Processo de Backup e Restauração (Ilustração)</h3>
+    <p>
+        <strong>Explicação Visual:</strong><br>
+        <ul>
+            <li><strong>Backup:</strong> O comando <code>mysqldump</code> exporta os dados do banco <code>banco_tarefas</code> para o arquivo <code>backup_banco_tarefas.sql</code>.</li>
+            <li><strong>Restauração:</strong> O comando <code>mysql</code> importa o arquivo <code>backup_banco_tarefas.sql</code> de volta para o banco <code>banco_tarefas</code>.</li>
+        </ul>
+    </p>
+</section>
+
 
         <!-- Seção SSH -->
         <section id="ssh">
